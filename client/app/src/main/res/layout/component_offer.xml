@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/component_item_category"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/buyer_image"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:src="@drawable/no_image"
+        app:layout_constraintBottom_toTopOf="@+id/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nekihaos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buyer_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Dostavljač Peki"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/remove_from_cart"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_marginEnd="10dp"
+            android:padding="7dp"
+            android:src="@drawable/exit_x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nekitekst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Šalje ponudu za dostavu:"
+            android:textColor="@color/grey"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/from"
+            app:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/nekitekst"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/od"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Cena dostave: "
+                android:textColor="@color/grey"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/cena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/od"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/od_location"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/inter"
+                android:text="rsd"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/cena" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/from"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/dokle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/inter"
+                android:text="Datum dostave: "
+                android:textColor="@color/grey"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/datum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="19-12-2023"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dokle"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detalji_porudzbine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/to"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/offer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/inter"
+                android:text="Porudžbina broj: "
+                android:textColor="@color/grey"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/offer_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="#234"
+                android:textColor="@color/black"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/offer"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/full_fill_button"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="Poseti profil"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nekihaos" />
+
+    <Button
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/full_fill_button"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="Detalji porudžbine"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nekihaos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

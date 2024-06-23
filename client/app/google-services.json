@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "607140392943",
+    "project_id": "malacprodavacbatmobile",
+    "storage_bucket": "malacprodavacbatmobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607140392943:android:9f0a5040c4568fa042501a",
+        "android_client_info": {
+          "package_name": "com.example.batmobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL6rI92CuVoCpW8oSNd9CMlg_HlhXGt-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

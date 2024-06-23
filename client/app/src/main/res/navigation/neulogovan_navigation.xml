@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/homeNeuloganFragment">
+
+    <fragment
+        android:id="@+id/sellerProfileFragment"
+        android:name="com.example.batmobile.SellerProfileFragment"
+        android:label="fragment_seller_profile"
+        tools:layout="@layout/fragment_seller_profile" >
+        <argument android:name="sellerId" app:argType="integer"/>
+<!--        <argument-->
+<!--            android:name="sellerId"-->
+<!--            app:argType="integer" />-->
+    </fragment>
+    <action
+        android:id="@+id/action_profileSeller"
+        app:destination="@id/sellerProfileFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@android:anim/fade_out" />
+    <fragment
+        android:id="@+id/productsCategoryFragment"
+        android:name="com.example.batmobile.fragments.ProductsCategoryFragment"
+        android:label="fragment_products_category"
+        tools:layout="@layout/fragment_products_category">
+        <argument
+            android:name="productsCategory"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_ProductsCategoryFragment"
+        app:destination="@id/productsCategoryFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@android:anim/fade_out" />
+    <fragment
+        android:id="@+id/informationNeulogovanFragment"
+        android:name="com.example.batmobile.fragments.neulogovan.InformationNeulogovanFragment"
+        android:label="fragment_information_neulogovan"
+        tools:layout="@layout/fragment_information_neulogovan" />
+    <fragment
+        android:id="@+id/profileNeulogovanFragment"
+        android:name="com.example.batmobile.fragments.neulogovan.ProfileNeulogovanFragment"
+        android:label="fragment_profile_neulogovan"
+        tools:layout="@layout/fragment_profile_neulogovan" />
+    <fragment
+        android:id="@+id/homeNeuloganFragment"
+        android:name="com.example.batmobile.fragments.neulogovan.HomeNeuloganFragment"
+        android:label="fragment_home_neulogan"
+        tools:layout="@layout/fragment_home_neulogan" />
+    <fragment
+        android:id="@+id/exploreNeulogovanFragment"
+        android:name="com.example.batmobile.fragments.neulogovan.ExploreNeulogovanFragment"
+        android:label="fragment_explore_neulogovan"
+        tools:layout="@layout/fragment_explore_neulogovan" />
+    <action
+        android:id="@+id/action_HomeNeulogovanFragment"
+        app:destination="@id/homeNeuloganFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
+    <action
+        android:id="@+id/action_ExploreNeulogovanFragment"
+        app:destination="@id/exploreNeulogovanFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
+    <action
+        android:id="@+id/action_ProfileNeulogovanFragment"
+        app:destination="@id/profileNeulogovanFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
+    <action
+        android:id="@+id/action_InformationNeulogovanFragment"
+        app:destination="@id/informationNeulogovanFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
+    <fragment
+        android:id="@+id/productViewFragment"
+        android:name="com.example.batmobile.fragments.ProductViewFragment"
+        android:label="fragment_product_view"
+        tools:layout="@layout/fragment_product_view" >
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_ProductViewFragment"
+        app:destination="@id/productViewFragment" />
+</navigation>

@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SellerProfileFragment"
+    android:background="@color/white">
+
+
+<androidx.core.widget.NestedScrollView
+    android:id="@id/scroll_products"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="22dp"
+        android:paddingTop="27dp"
+        android:paddingRight="22dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/optionsInformationSeller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:fontFamily="@font/balsamiq_sans"
+                android:text="Moj profil"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/edit_profile"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/edit"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlHardcoded,TouchTargetSizeCheck,SpeakableTextPresentCheck"></Button>
+
+            <Button
+                android:id="@+id/privremeni_logout"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/logout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            <Button
+                android:visibility="gone"
+                android:id="@+id/close_fragment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/exit_x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/optionsInformationSeller">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pre_radnog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_info">
+
+            <TextView
+                android:id="@+id/naslov_radno"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/component_item_category"
+                android:fontFamily="@font/balsamiq_sans"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Radno vreme"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+
+            <ImageView
+                android:id="@+id/broj_lajkova"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/component_item_category"
+                android:padding="5dp"
+                android:src="@drawable/maps"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/error_radno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nije podešeno radno vreme"
+                android:textColor="@color/red"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/naslov_radno" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/radno_vreme"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pre_radnog"
+            android:background="@color/white"
+            android:clickable="true">
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radno_vreme"
+            tools:ignore="MissingConstraints">
+
+                <Button
+                    android:id="@+id/proizvodi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="-1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/full_fill_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Proizvodi"
+                    android:textAllCaps="false"
+                    android:textSize="16dp" />
+            <Button
+                    android:id="@+id/objave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_button"
+                android:elevation="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Objave"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/search_add_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/options"
+            tools:layout_editor_absoluteX="22dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/search_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/input"
+                    android:drawableLeft="@drawable/explore"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:hint="Pretraži proizvode prema imenu"
+                    android:inputType="text"
+                    android:paddingLeft="11dp"
+                    android:paddingTop="11dp"
+                    android:paddingRight="9dp"
+                    android:paddingBottom="11dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="11dp"
+                    app:layout_constraintEnd_toStartOf="@+id/add_dugme"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
+
+                <ImageView
+                    android:id="@+id/add_dugme"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/add_text"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/add_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:text="Dodaj proizvod"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextSizeCheck"
+                    android:clickable="true"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/search_add_layout">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/menu_kategorije"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_add_layout">
+
+            <LinearLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <Button
+                    android:id="@+id/sve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/full_fill_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Sve"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextSizeCheck" >
+                </Button>
+
+                <Button
+                    android:id="@+id/mlecni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Mlečni proizvodi"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
+
+                <Button
+                    android:id="@+id/sveze_meso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Sveže meso"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
+
+                <Button
+                    android:id="@+id/preradjevine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Mesne prerđevine"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/namazi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Namazi"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/biljna_ulja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Biljna ulja"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/zitarice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Žitarice"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/napici"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Napici"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/voce_povrce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Voće i povrće"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <GridLayout
+            android:id="@+id/grid_of_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="0"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/menu_kategorije"
+            tools:layout_editor_absoluteX="22dp">
+
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

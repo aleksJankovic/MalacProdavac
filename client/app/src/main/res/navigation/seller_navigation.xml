@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/seller_navigation"
+    app:startDestination="@id/homeSellerFragment">
+
+    <action
+        android:id="@+id/action_PurchaseInformation"
+        app:destination="@id/sellerPurchaseInformationFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@android:anim/fade_out" />
+    <fragment
+        android:id="@+id/sellerPurchaseInformationFragment"
+        android:name="com.example.batmobile.fragments.seller.SellerPurchaseInformationFragment"
+        android:label="fragment_seller_purchase_information"
+        tools:layout="@layout/fragment_seller_purchase_information" >
+        <argument
+            android:name="purchaseId"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_ExploreNeulogovanFragment"
+        app:destination="@id/exploreNeulogovanFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
+    <fragment
+        android:id="@+id/exploreNeulogovanFragment"
+        android:name="com.example.batmobile.fragments.neulogovan.ExploreNeulogovanFragment"
+        android:label="fragment_explore_neulogovan"
+        tools:layout="@layout/fragment_explore_neulogovan" />
+    <fragment
+        android:id="@+id/productViewFragment"
+        android:name="com.example.batmobile.fragments.ProductViewFragment"
+        android:label="fragment_product_view"
+        tools:layout="@layout/fragment_product_view">
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_ProductViewFragment"
+        app:destination="@id/productViewFragment" />
+    <fragment
+        android:id="@+id/homeNeuloganFragment"
+        android:name="com.example.batmobile.fragments.neulogovan.HomeNeuloganFragment"
+        android:label="fragment_home_neulogan"
+        tools:layout="@layout/fragment_home_neulogan" />
+    <action
+        android:id="@+id/action_kupacHomeOld"
+        app:destination="@id/homeNeuloganFragment"
+        app:enterAnim="@android:anim/fade_in" />
+    <action
+        android:id="@+id/action_kupacHome"
+        app:destination="@id/homeSellerFragment"
+        app:enterAnim="@android:anim/fade_in" />
+    <fragment
+        android:id="@+id/kupacKorpa"
+        android:name="com.example.batmobile.fragments.kupac.KupacKorpa"
+        android:label="fragment_kupac_korpa"
+        tools:layout="@layout/fragment_kupac_korpa" />
+    <action
+        android:id="@+id/action_kupacKorpa"
+        app:destination="@id/kupacKorpa" />
+    <fragment
+        android:id="@+id/productsCategoryFragment"
+        android:name="com.example.batmobile.fragments.ProductsCategoryFragment"
+        android:label="fragment_products_category"
+        tools:layout="@layout/fragment_products_category" >
+        <argument
+            android:name="productsCategory"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_ProductsCategoryFragment"
+        app:destination="@id/productsCategoryFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@android:anim/fade_out" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.batmobile.fragments.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <action
+        android:id="@+id/action_CartFragment"
+        app:destination="@id/cartFragment" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.batmobile.fragments.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" />
+    <action
+        android:id="@+id/action_CheckoutFragment"
+        app:destination="@id/checkoutFragment" />
+    <fragment
+        android:id="@+id/sellerProfileFragment"
+        android:name="com.example.batmobile.SellerProfileFragment"
+        android:label="fragment_seller_profile"
+        tools:layout="@layout/fragment_seller_profile" />
+    <action
+        android:id="@+id/action_profileSeller"
+        app:destination="@id/sellerProfileFragment" />
+    <fragment
+        android:id="@+id/homeSellerFragment"
+        android:name="com.example.batmobile.fragments.seller.HomeSellerFragment"
+        android:label="fragment_home_seller"
+        tools:layout="@layout/fragment_home_seller" />
+    <fragment
+        android:id="@+id/sellerAddProductFragment"
+        android:name="com.example.batmobile.fragments.seller.SellerAddProductFragment"
+        android:label="fragment_seller_add_product"
+        tools:layout="@layout/fragment_seller_add_product" >
+        <argument
+            android:name="productId"
+            app:argType="integer"/>
+    </fragment>
+    <action
+        android:id="@+id/action_addProductSeller"
+        app:destination="@id/sellerAddProductFragment" />
+
+</navigation>

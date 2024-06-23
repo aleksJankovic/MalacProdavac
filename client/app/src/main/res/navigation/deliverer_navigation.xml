@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deliverer_navigation"
+    app:startDestination="@id/homeDelivererFragment">
+
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.batmobile.fragments.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" />
+    <action
+        android:id="@+id/action_CheckoutFragment"
+        app:destination="@id/checkoutFragment" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.batmobile.fragments.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <action
+        android:id="@+id/action_CartFragment"
+        app:destination="@id/cartFragment" />
+    <fragment
+        android:id="@+id/sellerProfileFragment"
+        android:name="com.example.batmobile.SellerProfileFragment"
+        android:label="fragment_seller_profile"
+        tools:layout="@layout/fragment_seller_profile">
+        <argument android:name="sellerId" app:argType="integer"/>
+<!--        <argument-->
+<!--            android:name="sellerId"-->
+<!--            app:argType="integer" />-->
+    </fragment>
+    <action
+        android:id="@+id/action_profileSeller"
+        app:destination="@id/sellerProfileFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@android:anim/fade_out" />
+    <fragment
+        android:id="@+id/productViewFragment"
+        android:name="com.example.batmobile.fragments.ProductViewFragment"
+        android:label="fragment_product_view"
+        tools:layout="@layout/fragment_product_view">
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_ProductViewFragment"
+        app:destination="@id/productViewFragment" />
+    <action
+        android:id="@+id/action_ProductsCategoryFragment"
+        app:destination="@id/productsCategoryFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@android:anim/fade_out" />
+    <fragment
+        android:id="@+id/productsCategoryFragment"
+        android:name="com.example.batmobile.fragments.ProductsCategoryFragment"
+        android:label="fragment_products_category"
+        tools:layout="@layout/fragment_products_category">
+        <argument
+            android:name="productsCategory"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeDelivererFragment"
+        android:name="com.example.batmobile.fragments.deliverer.HomeDelivererFragment"
+        android:label="fragment_home_deliverer"
+        tools:layout="@layout/fragment_home_deliverer" />
+    <action
+        android:id="@+id/action_HomeDelivererFragment"
+        app:destination="@id/homeDelivererFragment" />
+    <fragment
+        android:id="@+id/exploreNeulogovanFragment2"
+        android:name="com.example.batmobile.fragments.neulogovan.ExploreNeulogovanFragment"
+        android:label="fragment_explore_neulogovan"
+        tools:layout="@layout/fragment_explore_neulogovan" />
+    <action
+        android:id="@+id/action_ExploreSeller"
+        app:destination="@id/exploreNeulogovanFragment2" />
+    <fragment
+        android:id="@+id/delivererKorpaFragment"
+        android:name="com.example.batmobile.DelivererKorpaFragment"
+        android:label="fragment_deliverer_korpa"
+        tools:layout="@layout/fragment_deliverer_korpa" />
+    <fragment
+        android:id="@+id/delivererProfileFragment"
+        android:name="com.example.batmobile.DelivererProfileFragment"
+        android:label="fragment_deliverer_profile"
+        tools:layout="@layout/fragment_deliverer_profile" />
+    <action
+        android:id="@+id/action_delivererKorpa"
+        app:destination="@id/delivererKorpaFragment" />
+    <action
+        android:id="@+id/action_delivererProfile"
+        app:destination="@id/delivererProfileFragment" />
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.example.batmobile.fragments.OrderDetailsFragment"
+        android:label="fragment_product_in_order"
+        tools:layout="@layout/fragment_product_in_order">
+        <argument
+            android:name="orderId"
+            app:argType="long" />
+        <argument
+            android:name="offerId"
+            app:argType="long" />
+    </fragment>
+    <action
+        android:id="@+id/action_OrderDetailsFragmentt"
+        app:destination="@id/orderDetailsFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@android:anim/fade_out" />
+</navigation>

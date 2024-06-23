@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/input"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingRight="10dp"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/buyer_image"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:src="@drawable/image_blank"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Potreban dostavljač"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/buyer_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/remove_from_cart"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="10dp"
+        android:padding="7dp"
+        android:src="@drawable/slanje"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/buyer_image"
+        app:layout_constraintTop_toBottomOf="@+id/item_name"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/od"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="Od:"
+            android:textColor="@color/grey"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/location_od"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@drawable/location"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/od_location"
+            app:layout_constraintStart_toEndOf="@+id/od"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/od_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:layout_marginStart="5dp"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/location_od" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/buyer_image"
+        app:layout_constraintTop_toBottomOf="@+id/from"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/dokle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/inter"
+            android:text="Do:"
+            android:textColor="@color/grey"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/location_do"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@drawable/location"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/do_location"
+            app:layout_constraintStart_toEndOf="@+id/dokle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/do_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:layout_marginStart="5dp"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/location_do" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:background="@drawable/full_fill_button"
+        android:text="Detaljnije"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

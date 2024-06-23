@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/pozadina"
+        android:layout_width="207dp"
+        android:layout_height="199dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="92dp"
+        android:alpha="0.2"
+        android:contentDescription="background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/reg_bg" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints,UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="15dp"
+            android:contentDescription="go back"
+            android:onClick="goToRegisterstep2Activity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arrow_back"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/balsamiq_sans"
+            android:paddingLeft="2dp"
+            android:paddingTop="19dp"
+            android:paddingRight="54dp"
+            android:paddingBottom="12dp"
+            android:text="Registracija korisnika"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:srcCompat="@drawable/reg_3"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/kupacLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+        android:background="@drawable/border_background"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewKupac"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/image_blank"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Ime:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/user_nameKupac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Aleksandra"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Prezime:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/user_lastnameKupac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Stanić"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Korisničko ime:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/user_usernameKupac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="aleksandrastaniic"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Email:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/user_emailKupac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="aleksandrastanicpmf@gmail.com"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Šifra:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/user_passwordKupac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/inter"
+                android:text="**************"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/password_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onEyeIconClick"
+                app:srcCompat="@drawable/icons8_not_visible_96___"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Tip korisnika:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Kupac"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <Button
+            android:id="@+id/registruj_seKupac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/full_fill_button"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:onClick="sendRequestForRegistration"
+            android:paddingLeft="54dp"
+            android:paddingTop="12dp"
+            android:paddingRight="54dp"
+            android:paddingBottom="12dp"
+            android:text="Registruj se"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dostavljacLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/border_background"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewDostavljac"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/profilna"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Ime:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/user_nameDostavljac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Aleksandra"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Prezime:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/user_lastnameDostavljac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Stanić"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Korisničko ime:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/user_usernameDostavljac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="aleksandrastaniic"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView210"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Email:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/user_emailDostavljac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="aleksandrastanicpmf@gmail.com"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView212"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Šifra:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/user_passwordDostavljac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter"
+                android:text="**************"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <ImageView
+                android:id="@+id/password_eye2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onEyeIconClick"
+                app:srcCompat="@drawable/icons8_not_visible_96___"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView214"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Tip korisnika:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView215"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Dostavljač"
+            android:textColor="@color/grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView216"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/inter"
+            android:text="Odabrana vozila za dostavu:"
+            android:textColor="@color/light_grey"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <LinearLayout
+            android:id="@+id/vozilaDostavljac"
+            android:layout_width="match_parent"
+            android:layout_height="107dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            tools:ignore="MissingConstraints">
+
+            <FrameLayout
+                android:id="@+id/auto"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_background"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:focusable="true"
+                android:minHeight="90dp"
+                android:onClick="setVehicle"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="7dp"
+                    android:src="@drawable/auto" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Automobil"
+                    android:textColor="@color/black"
+                    android:textSize="9sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/motocikl"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_background"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:focusable="true"
+                android:minHeight="90dp"
+                android:onClick="setVehicle"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="7dp"
+                    android:src="@drawable/motocikl" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Motocikl"
+                    android:textColor="@color/black"
+                    android:textSize="9dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/kombi"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_background"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:focusable="true"
+                android:minHeight="90dp"
+                android:onClick="setVehicle"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="7dp"
+                    android:src="@drawable/kombi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Kombi"
+                    android:textColor="@color/black"
+                    android:textSize="9dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/kamion"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_background"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:focusable="true"
+                android:minHeight="90dp"
+                android:onClick="setVehicle"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="7dp"
+                    android:src="@drawable/kamion" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="Kamion"
+                    android:textColor="@color/black"
+                    android:textSize="9dp" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/registruj_seDostavljac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/full_fill_button"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:fontFamily="@font/inter_medium"
+            android:onClick="sendRequestForRegistration"
+            android:paddingLeft="54dp"
+            android:paddingTop="12dp"
+            android:paddingRight="54dp"
+            android:paddingBottom="12dp"
+            android:text="Registruj se"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="NotSibling,SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:id="@+id/prodavacLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_background"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageViewProdavac"
+                android:layout_width="82dp"
+                android:layout_height="82dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/image_blank"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5"
+                tools:ignore="ContentDescription" />
+
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Ime:"
+                android:textColor="@color/light_grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/user_nameProdavac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Aleksandra"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Prezime:"
+                android:textColor="@color/light_grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/user_lastnameProdavac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Stanić"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Korisničko ime:"
+                android:textColor="@color/light_grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/user_usernameProdavac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="aleksandrastaniic"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView310"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Email:"
+                android:textColor="@color/light_grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/user_emailProdavac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="aleksandrastanicpmf@gmail.com"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView312"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Šifra:"
+                android:textColor="@color/light_grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/user_passwordProdavac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter"
+                    android:text="**************"
+                    android:textColor="@color/grey"
+                    android:textSize="15dp"
+                    tools:ignore="TextSizeCheck" />
+
+                <ImageView
+                    android:id="@+id/password_eye3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onEyeIconClick"
+                    app:srcCompat="@drawable/icons8_not_visible_96___"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView314"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Tip korisnika:"
+                android:textColor="@color/light_grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView315"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Prodavac"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView316"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="PIB domaćinstva:"
+                android:textColor="@color/light_grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/user_pibProdavac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="21361283812733123"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView318"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Lokacija:"
+                android:textColor="@color/light_grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/user_locationProdavac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/inter"
+                android:text="Kragujevac, Mavrovska 25"
+                android:textColor="@color/grey"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+            <!--        -->
+
+            <org.osmdroid.views.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/registruj_seProdavac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/full_fill_button"
+                android:elevation="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:onClick="sendRequestForRegistration"
+                android:paddingLeft="54dp"
+                android:paddingTop="12dp"
+                android:paddingRight="54dp"
+                android:paddingBottom="12dp"
+                android:text="Registruj se"
+                android:textAllCaps="false"
+                android:textSize="18dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

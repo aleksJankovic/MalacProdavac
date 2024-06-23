@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BatMobile</string>
+
+    <string name="malac_prodavac">Malac Prodavac</string>
+    <string name="slogan">Mali proizvođači, veliki izbor!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="product_category">
+        <item>Odaberite kategoriju</item>
+        <item>Mlečni proizvodi</item>
+        <item>Voće i povrće</item>
+        <item>Mesne prerađevine</item>
+        <item>Sveže meso</item>
+        <item>Žitarice</item>
+        <item>Napici</item>
+        <item>Biljna ulja</item>
+        <item>Namazi</item>
+    </string-array>
+
+</resources>

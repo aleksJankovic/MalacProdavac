@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="15dp"
+    android:paddingTop="5dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="5dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/podaci"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/balsamiq_sans"
+            android:text="Izmenite radno vreme"
+            android:textColor="@color/grey"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/balsamiq_sans"
+            android:text=""
+            android:textColor="@color/grey"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:src="@drawable/exit_x"
+            app:layout_constraintEnd_toEndOf="@+id/time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text0"
+            app:layout_constraintWidth_percent="1" />
+
+        <HorizontalScrollView
+            android:id="@+id/menu_kategorije"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line">
+
+            <LinearLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <Button
+                    android:id="@+id/pon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Ponedeljak"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextSizeCheck"></Button>
+
+                <Button
+                    android:id="@+id/uto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Utorak"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
+
+                <Button
+                    android:id="@+id/sre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Sreda"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
+
+                <Button
+                    android:id="@+id/cet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Četvrtak"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
+
+                <Button
+                    android:id="@+id/pet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Petak"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Subota"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/ned"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/empty_button"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/inter"
+                    android:paddingLeft="23dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="23dp"
+                    android:paddingBottom="3dp"
+                    android:text="Nedelja"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/haos"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/podaci"
+        tools:layout_editor_absoluteX="15dp">
+
+        <TextView
+            android:id="@+id/dan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Radno vreme: "
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toBottomOf="@id/haos">
+
+
+
+        <Button
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/full_fill_button"
+            android:fontFamily="@font/inter"
+            android:text="Početak"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/vreme_start"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Početak rada:"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/start_time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toBottomOf="@id/start">
+
+        <Button
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/full_fill_button"
+            android:fontFamily="@font/inter"
+            android:text="Završetak"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/vreme_end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Završetak rada:"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/end_time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toBottomOf="@id/end"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:text="Time"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dugme"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sat"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/izmeni"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/full_fill_button"
+            android:fontFamily="@font/inter"
+            android:text="Potvrdi"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/full_fill_button"
+            android:fontFamily="@font/inter"
+            android:text="Resetuj"
+            android:textAllCaps="false"
+            android:layout_marginStart="50dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/izmeni"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/confirm_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dugme"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/potvrdi_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/full_fill_button_dark_blue"
+            android:fontFamily="@font/inter"
+            android:text="Potvrdi"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

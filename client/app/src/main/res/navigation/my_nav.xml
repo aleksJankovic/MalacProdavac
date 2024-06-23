@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/registerFragment_inputs">
+
+    <fragment
+        android:id="@+id/registerFragment_inputs"
+        android:name="com.example.batmobile.fragments.registracija.RegisterFragment_inputs"
+        android:label="fragment_register_inputs"
+        tools:layout="@layout/fragment_register_inputs" >
+        <action
+            android:id="@+id/navigate_step1ToStep2"
+            app:destination="@id/registerFragment_step2"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment_step2"
+        android:name="com.example.batmobile.fragments.registracija.RegisterFragment_step2"
+        android:label="fragment_register_step2"
+        tools:layout="@layout/fragment_register_step2" >
+        <action
+            android:id="@+id/navigate_step2ToStep1"
+            app:destination="@id/registerFragment_inputs"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/navigate_step2ToStep3"
+            app:destination="@id/registerFragment_step3"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment_step3"
+        android:name="com.example.batmobile.fragments.registracija.RegisterFragment_step3"
+        android:label="RegisterFragment_step3" >
+        <action
+            android:id="@+id/navigate_step3ToStep2"
+            app:destination="@id/registerFragment_step2"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+</navigation>
